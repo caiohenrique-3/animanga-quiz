@@ -30,7 +30,37 @@
   cursor: pointer;
 }
 
-@media(min-width: 640px){
+.question ul li.selected {
+  background-color: #d4d6f3;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.incorrect {
+  background-color: red;
+  color: white;
+}
+
+#check-restart-button {
+  font-family: "Poppins", sans-serif;
+  inline-size: 10rem;
+  block-size: 4rem;
+  background-color: #445092;
+  color: white;
+  border-radius: 0.575rem;
+  margin-block-end: 1rem;
+}
+
+#check-restart-button:hover,
+#check-restart-button:focus {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
   .question ul {
     display: flex;
   }
