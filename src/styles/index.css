@@ -10,3 +10,18 @@
   align-items: center;
   block-size: 100vh;
 }
+
+#start-quiz-button {
+  font-family: "Poppins", sans-serif;
+  inline-size: 10rem;
+  block-size: 4rem;
+  background-color: #445092;
+  color: white;
+  border-radius: 0.575rem;
+}
+
+#start-quiz-button:hover,
+#start-quiz-button:focus {
+  font-weight: 700;
+  cursor: pointer;
+}
