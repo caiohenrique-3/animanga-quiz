@@ -8,6 +8,7 @@ import "../styles/quiz.css";
 export default function Quiz() {
   const [questions, setQuestions] = useState([]);
   const [checkResults, setCheckResults] = useState(false);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     fetchQuestions();
@@ -83,6 +84,7 @@ export default function Quiz() {
       // Reset the quiz
       fetchQuestions();
       setCheckResults(false);
+      setScore(0);
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -95,6 +97,19 @@ export default function Quiz() {
       if (unansweredQuestions.length > 0) {
         alert("Please answer all questions before checking results.");
       } else {
+        // Calculate the score
+        const newScore = questions.reduce((totalScore, question) => {
+          if (
+            question.answers[question.selectedAnswer] ===
+              question.correct_answer
+          ) {
+            return totalScore + 1;
+          } else {
+            return totalScore;
+          }
+        }, 0);
+
+        setScore(newScore);
         setCheckResults(true);
         window.scrollTo({
           top: 0,
@@ -108,9 +123,12 @@ export default function Quiz() {
     <main>
       <div className="questions-container">
         {questionElements}
-        <button onClick={handleCheckResults} id="check-restart-button">
-          {checkResults ? "Reset game" : "Check results"}
-        </button>
+        <div className="button-container">
+          <button onClick={handleCheckResults} id="check-restart-button">
+            {checkResults ? "Reset game" : "Check results"}
+          </button>
+          {checkResults && <p>score: {score}/10</p>}
+        </div>
       </div>
     </main>
   );

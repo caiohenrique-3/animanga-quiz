@@ -44,6 +44,17 @@
   color: white;
 }
 
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.button-container p {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  padding-inline-start: 2rem;
+}
+
 #check-restart-button {
   font-family: "Poppins", sans-serif;
   inline-size: 10rem;
