@@ -1,0 +1,41 @@
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question {
+  border: 0.2rem solid black;
+  margin-block: 1rem;
+  margin-inline: 1rem;
+  padding: 1rem;
+  inline-size: 95%;
+  max-inline-size: 62.5rem;
+}
+
+.question ul {
+  list-style: none;
+  margin-block-start: 0.5rem;
+}
+
+.question ul li {
+  padding: 1rem;
+  border: 0.1rem solid #a0a4b2;
+  border-radius: 0.313rem;
+  margin-block: 1rem;
+  max-inline-size: 13rem;
+}
+
+.question ul li:hover {
+  cursor: pointer;
+}
+
+@media(min-width: 640px){
+  .question ul {
+    display: flex;
+  }
+
+  .question ul li {
+    margin-inline: 0.5rem;
+  }
+}

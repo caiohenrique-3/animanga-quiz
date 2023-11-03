@@ -1,6 +1,9 @@
 // dependencies
 import { useState } from "react";
 
+// components
+import Quiz from "./components/Quiz";
+
 // css
 import "./styles/index.css";
 import "./styles/fonts.css";
@@ -20,11 +23,7 @@ function App() {
         </button>
       )}
 
-      {isQuizStarted && (
-        <p>
-          Lorem ipsum dolor sit amet
-        </p>
-      )}
+      {isQuizStarted && <Quiz />}
     </div>
   );
 }
