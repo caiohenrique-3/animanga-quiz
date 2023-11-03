@@ -1,0 +1,43 @@
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1c2433;
+    color: white;
+  }
+
+  #start-quiz-button {
+    background-color: white;
+    color: black;
+  }
+
+  .question {
+    border-color: white;
+  }
+
+  .question ul li {
+    background-color: white;
+    color: black;
+  }
+
+  .question ul li.selected {
+    border-color: #b87d4b;
+    background-color: #b87d4b;
+    color: white;
+  }
+
+  #check-restart-button {
+    background-color: white;
+    color: black;
+  }
+
+  .correct {
+    border-color: green !important;
+    background-color: green !important;
+    color: white !important;
+  }
+
+  .incorrect {
+    border-color: red !important;
+    background-color: red !important;
+    color: white !important;
+  }
+}

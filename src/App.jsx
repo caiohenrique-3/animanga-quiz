@@ -7,6 +7,7 @@ import Quiz from "./components/Quiz";
 // css
 import "./styles/index.css";
 import "./styles/fonts.css";
+import "./styles/darkMode.css";
 
 function App() {
   const [isQuizStarted, setIsQuizStarted] = useState(false);
